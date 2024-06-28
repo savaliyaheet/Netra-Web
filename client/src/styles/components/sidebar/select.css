@@ -1,0 +1,150 @@
+.dropdown {
+  line-height: 1.1rem;
+}
+
+.dropdown span {
+  font-size: 0.875rem;
+}
+
+.show > .dropdown-menu {
+  max-height: 800px;
+  visibility: visible;
+  transition: all 0.4s ease-in-out;
+}
+
+.dropdown-menu {
+  inset: unset !important;
+  transform: none !important;
+  display: block;
+  max-height: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  border-radius: 10px;
+}
+
+.dropdown-toggle {
+  border-radius: 10px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  color: #141414 !important;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+  box-shadow: 0px 0px 0px 2px rgba(37, 116, 235, 0.35);
+}
+.image-container {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  
+.profile_img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: fill;
+}
+
+.dropdown-item {
+  padding: 0.625rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.hide .dropdown-item {
+  padding: 0.625rem;
+  justify-content: center;
+}
+
+.dropdown-item .profile_name {
+  margin-left: 0.8rem;
+}
+
+.hide .dropdown-item .btn {
+  border-radius: 50% !important;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-toggle span,
+.dropdown-toggle .icon {
+  opacity: 1;
+  animation: fadeIn 800ms ease-in-out;
+}
+
+.dropdown-toggle .icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown.show .dropdown-toggle .icon {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.hide .dropdown span,
+.hide .dropdown .dropdown-toggle .icon {
+  display: none !important;
+  width: 0 !important;
+  opacity: 0;
+}
+
+.hide .dropdown-menu {
+  min-width: 55px !important;
+}
+
+.hide .profile_img {
+  width: 28px;
+  height: 28px;
+}
+
+.dropdown .dropdown-toggle .icon {
+  color: inherit;
+  font-size: 1.5rem;
+  list-style: 17rem;
+}
+
+.hide .dropdown-toggle {
+  justify-content: center;
+}
+
+@media screen and (max-width: 576px) {
+  .dropdown-item {
+    padding: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dropdown-item .btn {
+    border-radius: 50% !important;
+  }
+  .dropdown span,
+  .dropdown .dropdown-toggle .icon {
+    display: none;
+  }
+  .dropdown-menu {
+    min-width: 55px !important;
+  }
+  .profile_img {
+    width: 28px;
+    height: 28px;
+  }
+  .dropdown-toggle {
+    justify-content: center;
+  }
+}

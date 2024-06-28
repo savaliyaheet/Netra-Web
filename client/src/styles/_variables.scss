@@ -1,0 +1,54 @@
+// IMPORT REQUIRED FONTS
+@font-face {
+  font-family: Euclid600;
+  src: url("../assets/fonts/Euclid\ Circular\ A\ SemiBold.ttf");
+  font-weight: 600 !important;
+}
+@font-face {
+  font-family: Euclid400;
+  src: url("../assets/fonts/Euclid\ Circular\ A\ Regular.ttf");
+  font-weight: 400 !important;
+}
+@font-face {
+  font-family: GothamBlack;
+  src: url("../assets/fonts/FontsFree-Net-Gotham-Black.ttf");
+  font-weight: 500;
+}
+
+//COLOR VARIABLES;
+$primary: #141414;
+$primary-main: #2574eb;
+$secondary: #676767;
+$white: #fff;
+$success: #45cf8d;
+$border-color: #ededed;
+$gradient: linear-gradient(90.83deg, #2bb3fe -2.69%, #2574eb 113.95%);
+$hover-gradient: linear-gradient(90.83deg, #2574eb -2.69%, #21aaf6 113.95%);
+$font-primary: Euclid400;
+$font-secondary: Euclid600;
+$logo-font: GothamBlack;
+//COLOR VARIABLES
+
+//Body varaibles
+$font-family-base: $font-primary;
+$body-color: $primary;
+//Style anchor elemets
+$link-color: $primary-main;
+$link-decoration: none;
+
+//Input form element
+$input-border-color: $border-color;
+$input-placeholder-color: #b4b4b4;
+$form-label-font-weight: 600;
+$form-label-color: $primary;
+
+// TYPOGRAPHY VARIABLES
+$headings-font-family: Euclid600;
+$headings-font-weight: 600 !important;
+$headings-color: $primary;
+
+//BUTTON VARIABLES
+$input-btn-font-family: Euclid400 !important;
+$btn-font-family: $input-btn-font-family;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

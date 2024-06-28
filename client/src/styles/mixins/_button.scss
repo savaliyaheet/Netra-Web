@@ -1,0 +1,10 @@
+@mixin btn-property($background, $color, $border: none) {
+  background: $background !important;
+  color: $color !important;
+  border: $border !important;
+  border-radius: 50px !important;
+  outline: none;
+  transition: all 0.15s ease-in-out !important;
+  padding-top: 0.625rem !important;
+  padding-bottom: 0.625rem !important;
+}

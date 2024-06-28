@@ -1,0 +1,290 @@
+.aside {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #ededed;
+  transition: all 0.5s ease-in-out;
+}
+
+.sidebar-scroll {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.hide {
+  width: 70px;
+  transition: all 0.5s ease-in-out;
+}
+
+.aside_logoSection {
+  height: 60px;
+  border-bottom: 1px solid #ededed;
+  overflow: hidden;
+}
+
+.logo-heading {
+  height: auto;
+  opacity: 1;
+  transition: height 600ms 600ms, opacity 700ms 500ms;
+}
+
+.createPostBtn button {
+  white-space: nowrap;
+}
+
+.createPostBtn span {
+  font-size: 14px;
+  opacity: 1;
+  animation: fadeIn 600ms ease-in-out;
+}
+
+.hide .createPostBtn span {
+  display: none;
+  opacity: 0;
+}
+
+.hide .logo-heading {
+  overflow: hidden; /* Hide the element content, while height = 0 */
+  height: 0;
+  opacity: 0;
+  transition: height 0ms 0ms, opacity 400ms 0ms;
+}
+
+.list-separator {
+  width: 80%;
+  margin: auto;
+  height: 1px;
+  background: #ededed;
+}
+
+.createPostBtn button {
+  overflow: hidden;
+}
+
+.icon {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #fff;
+}
+
+.aside_navLinks {
+  margin-top: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.hide .aside_navLinks {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.aside_navLinks li {
+  height: 50px;
+  color: var(--bs-secondary);
+}
+
+.aside_navLinks li a {
+  color: inherit;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.aside_navLinks li a:hover {
+  background: rgba(37, 116, 235, 0.1);
+  border-radius: 10px;
+  color: #2574eb;
+  transition: all 0.1s ease-in-out;
+}
+.aside_navLinks li a::before {
+  content: "";
+  height: 20px;
+  width: 2px;
+  background: #2574eb;
+  visibility: hidden;
+}
+
+.aside_navLinks li a.active::before {
+  visibility: visible;
+}
+
+.navIcon {
+  min-width: 60px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: inherit !important;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.hide .navIcon {
+  min-width: 50px;
+}
+
+.linkName {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.hide .linkName {
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.active {
+  background: rgba(37, 116, 235, 0.1);
+  border-radius: 10px;
+  color: #2574eb !important;
+}
+
+.main-container {
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  position: relative;
+  left: 250px;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.hide ~ .main-container {
+  width: calc(100% - 70px);
+  left: 70px;
+  transition: all 0.5s ease-in-out;
+}
+
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ededed;
+  padding: 0 1rem;
+  justify-content: space-between;
+  width: calc(100% - 250px);
+  position: fixed;
+  left: 250px;
+  top: 0;
+  background: white;
+  transition: all 0.5s ease-in-out;
+  z-index: 999;
+}
+
+.hide ~ .main-container .header {
+  width: calc(100% - 70px);
+  left: 70px;
+  transition: all 0.5s ease-in-out;
+}
+
+.headerIcon {
+  font-size: 1.3rem;
+  color: var(--bs-secondary);
+  cursor: pointer;
+}
+
+.page-container {
+  position: absolute;
+  top: 100px;
+  min-height: calc(100vh - 160px);
+  background: #f7fafc;
+  width: 100%;
+}
+
+.notification {
+  position: relative;
+}
+
+.notification .notification-status {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.1rem;
+  border: 1px solid #fff;
+  border-radius: 50em;
+  background-color: var(--bs-success);
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+/* Small Devices */
+@media screen and (max-width: 576px) {
+  .aside {
+    width: 0;
+    overflow: hidden;
+  }
+  .main-container {
+    width: 100%;
+    left: 0;
+  }
+  .hide {
+    width: 70px;
+    left: 0;
+  }
+  .hide ~ .main-container {
+    width: calc(100% - 70px);
+    left: 70px;
+  }
+
+  .page-container {
+    overflow: scroll;
+  }
+
+  .header,
+  .page-container {
+    width: 100%;
+    left: 0;
+  }
+
+  .hide ~ .header,
+  .hide ~ .page-container {
+    width: calc(100% - 70px);
+    left: 70px;
+  }
+
+  .linkName {
+    opacity: 0;
+    overflow: hidden;
+  }
+  .createPostBtn span {
+    display: none;
+  }
+  .navIcon {
+    min-width: 50px;
+  }
+  .aside_navLinks {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  .logo-heading {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  ,
+  100% {
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-attachment: gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(136, 136, 136);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 100, 100);
+  border-radius: 10px;
+}

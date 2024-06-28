@@ -1,0 +1,74 @@
+@font-face {
+  font-family: LogoFont;
+  src: url("../assets/fonts/FontsFree-Net-Gotham-Black.ttf");
+}
+
+.login {
+  height: 100vh;
+}
+
+.logoTitle {
+  display: block;
+  font-family: LogoFont;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 27px;
+}
+
+.seperator {
+  width: 100%;
+  height: 0.5px;
+  background: #ededed;
+}
+
+.banner_img {
+  width: 100%;
+  height: calc(100vh - 2rem);
+  border-radius: 1.2rem;
+  background-size: contain;
+}
+
+.login__main {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.login__main p {
+  color: #676767;
+}
+
+.login_icon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.login_right_section {
+  display: block;
+}
+
+/* //small */
+
+@media screen and (max-width: 384px) {
+  .logoTitle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .login__header_right {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .login_right_section {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1100px) {
+  .login__main {
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+  }
+}

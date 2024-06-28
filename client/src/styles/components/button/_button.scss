@@ -1,0 +1,16 @@
+.btn-primary {
+  @include btn-property($gradient, $white, none);
+
+  &:hover {
+    background: $hover-gradient !important;
+  }
+}
+
+.btn-secondary {
+  background-color: $white !important;
+  color: $secondary !important;
+  border: 1px solid $border-color !important;
+  border-radius: 50px !important;
+  outline: none;
+  transition: all 0.15s ease-in-out !important;
+}
